@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./TopBar.css";
 function TopBar() {
-    const PF = "http://localhost:5000/images/";
+    const PF = "http://52.65.233.83:8080/images/";
     const { user, dispatch } = useContext(Context);
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });

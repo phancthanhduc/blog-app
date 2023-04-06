@@ -3,7 +3,7 @@ import SideBar from "../../components/sidebar/SideBar";
 import { Context } from "../../context/Context";
 import httpRequest from "../../utils/httpRequest";
 import "./Settings.css";
-const PF = "http://localhost:5000/images/";
+const PF = "http://52.65.233.83:8080/images/";
 function Settings() {
     const { user, dispatch } = useContext(Context);
     const [file, setFile] = useState(null);

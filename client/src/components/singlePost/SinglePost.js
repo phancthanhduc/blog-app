@@ -12,7 +12,7 @@ function SinglePost() {
     const [post_desc, setPostDesc] = useState("");
     const [updateMode, setUpdateMode] = useState(false);
     const { user: userLogin } = useContext(Context);
-    const PF = "http://localhost:5000/images/";
+    const PF = "http://52.65.233.83:8080/images/";
     useEffect(() => {
         const fetchPost = async () => {
             const res = await httpRequest.get("posts/" + path);
