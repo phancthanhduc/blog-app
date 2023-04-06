@@ -14,9 +14,16 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  Category.getAll()
-    .then((data) => res.status(200).json(JSON.parse(data)))
-    .catch((err) => res.status(500).json(err));
+  const cat_name = req.query.cat;
+  if (cat_name) {
+    Category.getCategoryByName(cat_name)
+      .then((data) => res.status(200).json(JSON.parse(data)))
+      .catch((err) => res.status(500).json(err));
+  } else {
+    Category.getAll()
+      .then((data) => res.status(200).json(JSON.parse(data)))
+      .catch((err) => res.status(500).json(err));
+  }
 });
 
 router.get("/:id", async (req, res) => {
