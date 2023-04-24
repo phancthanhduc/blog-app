@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Post.css";
 function Post({ post }) {
     const [category, setCategory] = useState({});
-    const PF = "http://52.65.233.83:8080/images/";
+    const PF = "https://backend-blog.gm2g.com/images/";
     useEffect(() => {
         const fetchCategory = async () => {
             const res = await httpRequest.get(`categories/${post.cat_id}`);
